@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 主设置项 -->
+    <PreferenceCategory android:title="高级设置">
+
+        <!-- 第一层设置项 -->
+        <PreferenceScreen
+            android:key="advanced_settings"
+            android:title="网络设置"
+            android:summary="配置网络相关选项">
+
+            <!-- 第二层设置项 -->
+            <PreferenceCategory android:title="Wi-Fi 设置">
+
+                <!-- 第三层设置项 -->
+                <PreferenceScreen
+                    android:key="wifi_settings"
+                    android:title="Wi-Fi 选项"
+                    android:summary="配置 Wi-Fi 相关选项">
+
+                    <!-- 具体设置项 -->
+                    <SwitchPreference
+                        android:key="wifi_enabled"
+                        android:title="启用 Wi-Fi"
+                        android:summary="开启或关闭 Wi-Fi"
+                        android:defaultValue="true" />
+
+                    <EditTextPreference
+                        android:key="wifi_name"
+                        android:title="Wi-Fi 名称"
+                        android:summary="设置 Wi-Fi 网络名称"
+                        android:defaultValue="MyWiFi" />
+                </PreferenceScreen>
+            </PreferenceCategory>
+
+            <!-- 第二层设置项 -->
+            <PreferenceCategory android:title="移动数据设置">
+
+                <!-- 第三层设置项 -->
+                <PreferenceScreen
+                    android:key="mobile_data_settings"
+                    android:title="移动数据选项"
+                    android:summary="配置移动数据相关选项">
+
+                    <!-- 具体设置项 -->
+                    <SwitchPreference
+                        android:key="mobile_data_enabled"
+                        android:title="启用移动数据"
+                        android:summary="开启或关闭移动数据"
+                        android:defaultValue="false" />
+
+                    <EditTextPreference
+                        android:key="data_limit"
+                        android:title="数据限制"
+                        android:summary="设置每月数据使用限制"
+                        android:defaultValue="1GB" />
+                </PreferenceScreen>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
